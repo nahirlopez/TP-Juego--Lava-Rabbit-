@@ -14,12 +14,16 @@ public class movimientoplayer : MonoBehaviour
     public float speedZ;
     public float speedgiro;
     public float JumpForce;
+    float Anguloy;
 
     Rigidbody rb;
     int hasJump;
     // Update is called once per frame
     void Update()
     {
+        Anguloy = transform.eulerAngles.y;
+        transform.eulerAngles = new Vector3(0, Anguloy, 0);
+
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(0, 0, speedZ);
