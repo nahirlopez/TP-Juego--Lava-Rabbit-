@@ -11,7 +11,8 @@ public class movimientoplayer : MonoBehaviour
     public GameObject Lava;
     float Anguloy;
 
-    AudioSource source;
+    public AudioSource source;
+    public AudioSource muerte;
     public AudioClip YAY;
     public AudioClip chanchan;
     
@@ -23,7 +24,7 @@ public class movimientoplayer : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         hasJump = 2;
-        source = GetComponent<AudioSource>();
+        
         source.Play();
     }
 
@@ -42,6 +43,9 @@ public class movimientoplayer : MonoBehaviour
 
             Lava.transform.position = new Vector3(-1.7f, -5f, 10f);
             transform.localScale = new Vector3(1.328159f, 1.535091f, 1.451843f);
+            source.clip = chanchan;
+            source.Play();
+            muerte.Play();
         }
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
@@ -81,6 +85,7 @@ public class movimientoplayer : MonoBehaviour
             
             source.clip = chanchan;
             source.Play();
+            muerte.Play();
 
         }
         if (col.gameObject.tag == "zanahoria")
