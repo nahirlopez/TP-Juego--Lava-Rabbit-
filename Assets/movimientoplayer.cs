@@ -44,6 +44,7 @@ public class movimientoplayer : MonoBehaviour
             Lava.transform.position = new Vector3(-1.7f, -5f, 10f);
             transform.localScale = new Vector3(1.328159f, 1.535091f, 1.451843f);
             source.clip = chanchan;
+            source.loop = (true);
             source.Play();
             muerte.Play();
         }
