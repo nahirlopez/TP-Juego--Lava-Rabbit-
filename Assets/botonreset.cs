@@ -10,6 +10,7 @@ public class botonreset : MonoBehaviour
     public GameObject lava;
     public GameObject mensaje;
     public AudioSource source;
+    public GameObject zamahoria;
     void Start()
     {
         
@@ -24,6 +25,7 @@ public class botonreset : MonoBehaviour
     public void resetear()
     {
         mensaje.SetActive(false);
+        zamahoria.SetActive(true);
         lava.transform.position = new Vector3(-1.7f, -5f, 10f);
         conejo.transform.position = new Vector3(5.422269f, 3.647719f, -3.427317f);
         conejo.transform.eulerAngles = new Vector3(0.486f, -88.15501f, 4.263f);

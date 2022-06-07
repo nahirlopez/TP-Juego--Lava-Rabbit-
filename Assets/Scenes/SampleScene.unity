@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44906652, g: 0.4991371, b: 0.57571507, a: 1}
+  m_IndirectSpecularColor: {r: 0.44906574, g: 0.49913657, b: 0.57571393, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1900,6 +1900,7 @@ MonoBehaviour:
   lava: {fileID: 968561503}
   mensaje: {fileID: 201336039}
   source: {fileID: 649218490}
+  zamahoria: {fileID: 529427948}
 --- !u!4 &649218493
 Transform:
   m_ObjectHideFlags: 0
@@ -3517,7 +3518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedZ: 0.1
   speedgiro: 2
-  JumpForce: 120
+  JumpForce: 90
   Lava: {fileID: 968561503}
   source: {fileID: 1479389484}
   muerte: {fileID: 1479389485}

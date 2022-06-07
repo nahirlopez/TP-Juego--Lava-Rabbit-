@@ -19,7 +19,7 @@ public class ZanaZana : MonoBehaviour
     {
         if (col.gameObject.name == "conejito")
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
 
             mensaje.SetActive(true);
         }
