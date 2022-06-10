@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class movimientoplayer : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class movimientoplayer : MonoBehaviour
     public float JumpForce;
     public GameObject Lava;
     float Anguloy;
+    
 
     public AudioSource source;
     public AudioSource muerte;
@@ -18,14 +20,24 @@ public class movimientoplayer : MonoBehaviour
     
 
     Rigidbody rb;
-    int hasJump; 
-    
+    int hasJump;
+
+    //tiempo
+    public Text tiempo;
+    public Text TiempoFINAL;
+    float Tiempofinal;
+    bool activador;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         hasJump = 2;
         
         source.Play();
+
+        Tiempofinal = 0;
+
+        activador = true;
     }
 
     
@@ -38,6 +50,7 @@ public class movimientoplayer : MonoBehaviour
 
         if (transform.position.y <= 1.535091f)
         {
+            activador = true;
             transform.position = new Vector3(5.422269f, 3.647719f, -3.427317f);
             transform.eulerAngles = new Vector3(0.486f, -88.15501f, 4.263f);
 
@@ -71,6 +84,19 @@ public class movimientoplayer : MonoBehaviour
             rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
             hasJump --;
         }
+
+        if (activador==true)
+        {
+            Tiempofinal += Mathf.Floor(Time.deltaTime);
+            
+        }tiempo.text = Tiempofinal.ToString();
+        
+        if (activador == false)
+        {
+            TiempoFINAL.text = tiempo.text;
+            Tiempofinal = 0;
+        }
+
     }
     void OnCollisionEnter(Collision col)
     {
@@ -87,6 +113,7 @@ public class movimientoplayer : MonoBehaviour
             source.clip = chanchan;
             source.Play();
             muerte.Play();
+            activador = true;
 
         }
         if (col.gameObject.tag == "zanahoria")
@@ -96,7 +123,7 @@ public class movimientoplayer : MonoBehaviour
             source.clip = YAY;
             source.loop = false;
             source.Play();
-            
+            activador = false;
         }
             
     }
