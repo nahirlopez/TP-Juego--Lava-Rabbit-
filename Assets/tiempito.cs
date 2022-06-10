@@ -16,7 +16,7 @@ public class tiempito : MonoBehaviour
     void Update()
     {
         float time = Time.time;
-        tiempo.text = Mathf.Floor(time).ToString() + " ";
+        tiempo.text = Mathf.Floor(time).ToString() + " segs";
             
     }
 }
