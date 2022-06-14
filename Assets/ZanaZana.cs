@@ -30,7 +30,7 @@ public class ZanaZana : MonoBehaviour
             for(int i=0; i < 20; i++)
             {
                 clon = Instantiate(conejou);
-                Destroy(clon, 10);
+                Destroy(clon, 5);
             }
         }
 
