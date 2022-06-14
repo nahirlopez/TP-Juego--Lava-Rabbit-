@@ -23,10 +23,10 @@ public class movimientoplayer : MonoBehaviour
     int hasJump;
 
     //tiempo
-    public Text tiempo;
-    public Text TiempoFINAL;
-    float Tiempofinal;
-    bool activador;
+    //public Text tiempo;
+    //public Text TiempoFINAL;
+    //float Tiempofinal;
+    //bool activador;
 
     void Start()
     {
@@ -35,9 +35,9 @@ public class movimientoplayer : MonoBehaviour
         
         source.Play();
 
-        Tiempofinal = 0;
+        //Tiempofinal = 0;
 
-        activador = true;
+        //activador = true;
     }
 
     
@@ -50,7 +50,7 @@ public class movimientoplayer : MonoBehaviour
 
         if (transform.position.y <= 1.535091f)
         {
-            activador = true;
+            //activador = true;
             transform.position = new Vector3(5.422269f, 3.647719f, -3.427317f);
             transform.eulerAngles = new Vector3(0.486f, -88.15501f, 4.263f);
 
@@ -58,6 +58,7 @@ public class movimientoplayer : MonoBehaviour
             transform.localScale = new Vector3(1.328159f, 1.535091f, 1.451843f);
             source.clip = chanchan;
             source.loop = (true);
+            source.Stop();
             source.Play();
             muerte.Play();
         }
@@ -85,17 +86,17 @@ public class movimientoplayer : MonoBehaviour
             hasJump --;
         }
 
-        if (activador==true)
-        {
-            Tiempofinal += Mathf.Floor(Time.deltaTime);
+        //if (activador==true)
+        //{
+        //    Tiempofinal += Mathf.Floor(Time.deltaTime);
             
-        }tiempo.text = Tiempofinal.ToString();
+        //}tiempo.text = Tiempofinal.ToString();
         
-        if (activador == false)
-        {
-            TiempoFINAL.text = tiempo.text;
-            Tiempofinal = 0;
-        }
+        //if (activador == false)
+        //{
+        //    TiempoFINAL.text = tiempo.text;
+        //    Tiempofinal = 0;
+        //}
 
     }
     void OnCollisionEnter(Collision col)
@@ -111,19 +112,21 @@ public class movimientoplayer : MonoBehaviour
 
             
             source.clip = chanchan;
+            source.Stop();
             source.Play();
             muerte.Play();
-            activador = true;
+            //activador = true;
 
         }
         if (col.gameObject.tag == "zanahoria")
         {
             transform.localScale = new Vector3 (14.26132f, 14.83979f, 12.83342f);
-            transform.position = new Vector3(-22.2f, 91.3f, -8.5f);
+            transform.position = new Vector3(-0.8f, 95f, -15.2f);
             source.clip = YAY;
             source.loop = false;
+            source.Stop();
             source.Play();
-            activador = false;
+            //activador = false;
         }
             
     }

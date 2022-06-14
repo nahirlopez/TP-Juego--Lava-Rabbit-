@@ -9,9 +9,9 @@ public class botonreset : MonoBehaviour
     public GameObject conejo;
     public GameObject lava;
     public GameObject mensaje;
-    public AudioSource source;
+   public AudioSource source;
     public GameObject zamahoria;
-    public GameObject conejou;
+   
     void Start()
     {
         
@@ -25,7 +25,7 @@ public class botonreset : MonoBehaviour
 
     public void resetear()
     {
-        Destroy(conejou);
+        
         mensaje.SetActive(false);
         zamahoria.SetActive(true);
         lava.transform.position = new Vector3(-1.7f, -5f, 10f);
@@ -33,6 +33,8 @@ public class botonreset : MonoBehaviour
         conejo.transform.eulerAngles = new Vector3(0.486f, -88.15501f, 4.263f);
         conejo.transform.localScale = new Vector3(1.328159f, 1.535091f, 1.451843f);
         source.Play();
-}
+        if (conejo.transform.position == new Vector3(5.422269f, 3.647719f, -3.427317f))
+        source.Stop();
+        }
 
 }
