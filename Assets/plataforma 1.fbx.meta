@@ -1,32 +1,47 @@
 fileFormatVersion: 2
-guid: b3ec633c6924f2b4daed1b2b4a5e430e
+guid: c5759f405768d4646b9f2752bb609f65
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Cylinder
-    100002: Cylinder.001
-    100004: //RootNode
-    400000: Cylinder
-    400002: Cylinder.001
-    400004: //RootNode
-    2100000: Material.003
-    2300000: Cylinder
-    2300002: Cylinder.001
-    3300000: Cylinder
-    3300002: Cylinder.001
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Material
+    2100002: Material.001
+    2100004: Material.002
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Cylinder
-    4300002: Cylinder.001
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 03bfc58c2b56cdd47b0b012e4b903b7a, type: 2}
+      name: Material
+    second: {fileID: 2100000, guid: 64a26b3b5bf090240b443bbecefac3bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: f8f0c43044062954b926f974eb91f897, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 42341b376bb03e640bfe7ddf5976bbaa, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: 42541bb800d5b946db4e6d0b8da75084 (1)
-    second: {fileID: 2800000, guid: 7fca13d948ae7a440b7927d4cb4e2f0e, type: 3}
+      name: 42541bb800d5b946db4e6d0b8da75084
+    second: {fileID: 2800000, guid: c947f91c71f55354e9bf961c72578331, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: beautiful-color-gradient-palettes-1
+    second: {fileID: 2800000, guid: 3790bd489759e5c4e92441a46a6eafe7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: istockphoto-1318500486-170667a
+    second: {fileID: 2800000, guid: 38ca827201c19c44d8aab57badb2a691, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
