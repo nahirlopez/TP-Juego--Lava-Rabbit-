@@ -27,12 +27,12 @@ public class tiempito : MonoBehaviour
             //customtime += Mathf.Floor(Time.deltaTime);
             customtime += Time.deltaTime;
         }
-        tiempo.text = customtime.ToString();
+        tiempo.text = customtime.ToString() + " segundos";
 
             if (conejo.transform.localScale ==new Vector3(14.26132f, 14.83979f, 12.83342f))
         {
             iscounting = false;
-            tiempofinal.text = "¡En tan solo " + tiempo.text + " segundos!"; 
+            tiempofinal.text = "¡En tan solo " + tiempo.text + "!"; 
             
         }
 
